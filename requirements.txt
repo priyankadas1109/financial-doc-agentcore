@@ -1,0 +1,6 @@
+bedrock-agentcore
+bedrock-agentcore-starter-toolkit
+boto3
+python-docx
+strands-agents[otel]
+aws-opentelemetry-distro>=0.10.0
