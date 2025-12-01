@@ -15,7 +15,7 @@ Whenever a new document (KYC form, advisory memo, suitability document, etc.) is
 
 ## 1. High-Level Architecture
 
-![System architecture](assets/architecture.png)
+![System architecture](assets/Architecture.jpg)
 <!-- Architecture.jpg -->
 
 **Key components**
