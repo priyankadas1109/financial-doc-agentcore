@@ -103,3 +103,95 @@ Whenever a new document (KYC form, advisory memo, suitability document, etc.) is
 ![AgentCore Runtime](assets/3.png)
 
 Shows the financial_doc_supervisor AgentCore runtime used by this pipeline.
+
+3.2 Event-Driven Lambda + S3 Notifications
+
+Lambda trigger from S3:
+
+![](assets/1.png)
+
+S3 bucket event notification on intake/:
+
+![](assets/9.png)
+3.3 S3 Layout & Outputs
+
+S3 folder structure:
+
+![](assets/5.png)
+
+Textract / normalized text output:
+
+![](assets/6.png)
+
+Final HTML intelligence reports:
+
+![](assets/7.png)
+4. Sample Input vs. Intelligence Report
+
+Raw KYC RTF document:
+
+![](assets/13.png)
+
+Generated Document Intelligence Report:
+
+![](assets/14.png)
+
+The report includes:
+
+High-level understanding of the document.
+
+Detected internal category (e.g., KYC_DOC, SUMMARY_MEMO).
+
+Key insights and extracted fields.
+
+Clear automated outcome text for advisors.
+
+5. Observability & Tracing
+
+Trace map for the full path (S3 → Lambda → AgentCore → S3 / Model):
+
+![](assets/18.png)
+
+AgentCore observability overview (sessions, traces, error rate):
+
+![](assets/20.png)
+
+Span-level latency & model metrics (S3, AgentCore, model calls):
+
+![](assets/25.png)
+
+These views confirm:
+
+End-to-end latency per document.
+
+Breakdown of time spent in:
+
+Textract (when used).
+
+Bedrock model calls.
+
+S3 get/put operations.
+
+Error-free operation across multiple sessions.
+
+6. Technology Stack
+
+AWS Services
+
+Amazon Bedrock AgentCore
+
+Amazon Textract (tool invoked from AgentCore)
+
+Amazon S3
+
+AWS Lambda
+
+Amazon ECR
+
+Amazon CloudWatch + GenAI Observability
+
+Runtime & Code
+
+Node.js Lambda for S3 event ingestion and runtime invocation.
+
+Containerized AgentCore app (Python/Node, depending on your image) pushed to ECR.
