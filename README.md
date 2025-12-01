@@ -98,8 +98,8 @@ Whenever a new document (KYC form, advisory memo, suitability document, etc.) is
 
 
 ## 3. AWS Screenshots
-3.1 AgentCore Runtime
+3.1 AgentCore Runtime: highlight financial_doc_supervisor as the active agent -->
 
-<!-- 3.png: highlight financial_doc_supervisor as the active agent -->
+![AgentCore Runtime](assets/3.png)
 
 Shows the financial_doc_supervisor AgentCore runtime used by this pipeline.
