@@ -95,3 +95,11 @@ Whenever a new document (KYC form, advisory memo, suitability document, etc.) is
     Final HTML report → outputs/<original-file-name>.html
 
 7. All calls are traced via CloudWatch GenAI Observability, giving span-level metrics for S3, Textract, AgentCore, and the underlying Bedrock model.
+
+
+## 3. AWS Screenshots
+3.1 AgentCore Runtime
+
+<!-- 3.png: highlight financial_doc_supervisor as the active agent -->
+
+Shows the financial_doc_supervisor AgentCore runtime used by this pipeline.
