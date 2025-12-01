@@ -1,4 +1,3 @@
-# financial-doc-agentcore
 # Event-Driven Financial Document Intelligence on AWS Bedrock AgentCore
 
 This project implements an **end-to-end, serverless GenAI pipeline** for financial documents using **Amazon Bedrock AgentCore**, **AWS Lambda**, **Amazon Textract**, **Amazon S3**, and **CloudWatch GenAI Observability**.
